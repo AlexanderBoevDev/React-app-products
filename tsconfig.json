@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		/* Основные параметры */
+		"target": "es6",                                // Указываем целевую версию ECMAScript.
+		"module": "esnext",                             // Указываем, какой стандарт модулей использовать.
+		"lib": ["dom", "dom.iterable", "esnext"],       // Библиотеки типов для компилятора.
+		"allowJs": true,                                // Разрешаем JavaScript файлы в проекте.
+		"skipLibCheck": true,                           // Пропускаем проверку типов в .d.ts файлах.
+		"esModuleInterop": true,                        // Включаем совместимость с модулями Node.js.
+		"allowSyntheticDefaultImports": true,           // Разрешаем default imports для модулей без explicit default export.
+		"strict": true,                                 // Включаем все строгие типизационные опции.
+		"forceConsistentCasingInFileNames": true,       // Обеспечиваем консистентность регистра в именах файлов.
+		
+		/* Опции модулей */
+		"moduleResolution": "node",                     // Алгоритм разрешения модулей Node.js.
+		"resolveJsonModule": true,                      // Разрешаем импорт JSON модулей.
+		"isolatedModules": true,                        // Обеспечиваем, что каждый файл может быть безопасно транспилирован в отдельности.
+		
+		/* Директивы вывода */
+		"outDir": "./build",                            // Папка для скомпилированных файлов.
+		"jsx": "react-jsx",                             // Поддержка JSX для React 17+.
+		
+		/* Служебные опции */
+		"incremental": true,                            // Включаем инкрементальную компиляцию.
+		"noEmitOnError": true                           // Не создавать выходные файлы, если есть ошибки.
+	},
+	"include": [
+		"src"                                           // Указываем, что компилировать.
+	],
+	"exclude": [
+		"node_modules",                                 // Исключаем папку с модулями.
+		"**/*.spec.ts",                                 // Исключаем тестовые файлы.
+		"**/*.test.ts"
+	]
+}
